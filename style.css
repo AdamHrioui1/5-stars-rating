@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating_container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;/*
+    transform: rotate(180deg);*/
+}
+
+input[name="rating"] {
+    display: none;
+}
+
+label {
+    color: #ccc;/*
+    transform: rotate(180deg);*/
+    cursor: pointer;
+    float: right;
+}
+
+
+label:hover ,
+input[name="rating"]:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+
+input[name="rating"]:checked ~ label {
+    color: #fd4;
+}
